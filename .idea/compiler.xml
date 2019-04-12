@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="com.example.mayavi.main" target="1.8" />
       <module name="com.example.mayavi.test" target="1.8" />
+      <module name="com.mayavi.mayavi.main" target="1.8" />
+      <module name="com.mayavi.mayavi.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

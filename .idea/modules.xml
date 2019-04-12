@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.mayavi.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.mayavi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.mayavi.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.mayavi.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.mayavi.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.mayavi.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.mayavi.mayavi.test.iml" />
     </modules>
   </component>
 </project>
