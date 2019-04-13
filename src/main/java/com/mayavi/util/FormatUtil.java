@@ -1,5 +1,7 @@
 package com.mayavi.util;
 
+import com.mayavi.models.APIResponses;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,5 +24,9 @@ public class FormatUtil {
         Matcher m = pattern.matcher(query);
 
         return m.find();
+    }
+
+    public static void printResponse(APIResponses apiResponses) {
+        System.out.println(apiResponses.getApiResponse());
     }
 }

@@ -39,6 +39,7 @@ public class Controller {
     @RequestMapping(value = "/services/data/v39.0/sobjects/lead/{leadId}", method = RequestMethod.GET, headers="Accept=application/json", produces = MediaType.APPLICATION_JSON_VALUE)
     public String dmiQueryLead(@ApiParam(value = "lead Id", required = true) @PathVariable String leadId) {
         APIResponses apiResponses = aPIResponsesRepository.findByApiCallName(Constants.DMI_GET_LEAD_API_NAME);
+        System.out.println(FormatUtil.formatDmiQueryLeadResponse(apiResponses.getApiResponse(), leadId));
         return FormatUtil.formatDmiQueryLeadResponse(apiResponses.getApiResponse(), leadId);
     }
 
@@ -50,6 +51,7 @@ public class Controller {
         if (apiResponses==null){
             return null;
         }
+        FormatUtil.printResponse(apiResponses);
         return apiResponses.getApiResponse();
     }
 
@@ -61,8 +63,10 @@ public class Controller {
         if (apiResponses!=null){
             apiResponses.setApiResponse(response);
             aPIResponsesRepository.save(apiResponses);
+            System.out.println(new GenericResponse<String>(true, "Successfully updated the response").toString());
             return new GenericResponse<String>(true, "Successfully updated the response");
         }
+        System.out.println(new GenericResponse<String>(false, "Failed to update the response").toString());
         return new GenericResponse<String>(false, "Failed to update the response");
     }
 
@@ -83,6 +87,7 @@ public class Controller {
         if (apiResponses==null){
             return null;
         }
+        FormatUtil.printResponse(apiResponses);
         return apiResponses.getApiResponse();
     }
 
@@ -94,6 +99,7 @@ public class Controller {
         if (apiResponses==null){
             return null;
         }
+        FormatUtil.printResponse(apiResponses);
         return apiResponses.getApiResponse();
     }
 
@@ -105,6 +111,7 @@ public class Controller {
         if (apiResponses==null){
             return "API hasn't been configured yet";
         }
+        FormatUtil.printResponse(apiResponses);
         return apiResponses.getApiResponse();
     }
 
@@ -115,16 +122,20 @@ public class Controller {
         if (apiResponses==null){
             return "API hasn't been configured yet";
         }
+        FormatUtil.printResponse(apiResponses);
         return apiResponses.getApiResponse();
     }
 
-//    @ApiOperation(value = "DMI Cibil")
-//    @RequestMapping(value = "services/data/v39.0/sobjects/contact/", method = RequestMethod.POST, headers="Accept=application/json")
-//    public String dmiCibil(){
-//        APIResponses apiResponses = aPIResponsesRepository.findByApiCallName(Constants.DMI_CREATE_CONTACT_API_NAME);
-//        if (apiResponses==null){
-//            return "API hasn't been configured yet";
-//        }
-//        return apiResponses.getApiResponse();
-//    }
+    @ApiOperation(value = "DMI Cibil")
+    @RequestMapping(value = "dmi/cibil", method = RequestMethod.POST, headers="Accept=application/json")
+    public String dmiCibil(){
+        APIResponses apiResponses = aPIResponsesRepository.findByApiCallName(Constants.DMI_CIBIL_API_NAME);
+        if (apiResponses==null){
+            return "API hasn't been configured yet";
+        }
+        FormatUtil.printResponse(apiResponses);
+        return apiResponses.getApiResponse();
+    }
+
+
 }
