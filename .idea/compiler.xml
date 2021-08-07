@@ -3,12 +3,25 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.6/616105b0831250a2e443447508e6a8b26bc466fb/lombok-1.18.6.jar" />
+        </processorPath>
+        <module name="navi.main" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.example.mayavi.main" target="1.8" />
       <module name="com.example.mayavi.test" target="1.8" />
       <module name="com.mayavi.mayavi.main" target="1.8" />
       <module name="com.mayavi.mayavi.test" target="1.8" />
+      <module name="mayavi" target="1.8" />
+      <module name="mayavi.main" target="1.8" />
+      <module name="mayavi.test" target="1.8" />
+      <module name="navi" target="1.8" />
+      <module name="navi.main" target="1.8" />
+      <module name="navi.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
